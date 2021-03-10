@@ -1,0 +1,56 @@
+#slider {
+    position: relative;
+    margin: auto; /*لكي يظهر في الوسط*/
+    margin-top: 30px;
+    border: 5px black solid;
+    overflow: hidden;
+}
+#wrapper {
+    width: 400%; /*أربعة لأنه لدينا اربع صور فستأخذ كل صورة الحجم الكامل من الاب*/
+    height: 100%; /*الارتفاع الكامل من الأب*/
+    transition: transform 0.5s ease-in-out;
+}
+#wrapper .content {
+    float: right;
+    width: 25%;
+    height: 100%;
+    background-repeat: no-repeat; /*عدم التكرار ضمن اللوحة الواحدة*/
+    position: relative; /*موقعها ضمن الوسم الحالي لها*/
+}
+#wrapper .content img {
+    width: 100%;
+}
+#navLinks {
+    text-align: center;
+    position: absolute; /*لكي نستطيع اظهارها فوق الصنف الذي يحتوي الصور*/
+    top: 0; /*لتظهر في الأعلى*/
+    right: 50%; /*لتظهر في الوسط*/
+    transform: translate(50%,0)
+}
+#navLinks ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-top: 6px;
+}
+#navLinks ul li {
+    float: right;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #ccc;
+    list-style: none;
+    border: black 5px solid;
+    border-radius: 50%;
+}
+#navLinks ul li:hover {
+    background-color: #ff0;
+}
+
+#navLinks ul li.active { /*العنصر المحدد*/
+    background-color: #333;
+}
+#navLinks ul li.active:hover { /*العنصر المحددوعليه الفأره*/
+    background-color: #484848;
+}
